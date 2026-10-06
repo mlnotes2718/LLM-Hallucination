@@ -8,7 +8,9 @@ LLM is known to have hallucination problem since 2022. However, as models are ge
 
 Recently, I encounter a situation where LLM give me the wrong answer to a probability challenges. 
 
-On a separate occasion, when asked "What is the limitation of LLM", Gemini returns a list which is extracted from blog post. This is not what I have expected as other LLM give me information extracted from papers.
+On a separate issue, when we ask LLM question, always as LLM for information source. Sometimes, the source may surprises you. 
+
+On a separate assignment, we also learn that frontier model is good at extracting numbers from a table in image form, able to analyze chart in image form, and deciphering relative position on a map in image form. Frontier model is fairly good in detecting objects in an image provide the object is distinctive. However, frontier model failed in analyzing complex transit map and calculating the optimize route.  
 
 ### Hallucination in Probability Challenge
 
@@ -45,17 +47,41 @@ I double check with ChatGPT with the original chat:
 
 
 ### Reliable Source of Information
-When asking a question, 
+When asking a question, always as for information source. In a recent exercise, we asked Gemini "What is the limitation of LLM". Gemini use search to gather results and compose a response with source link. Source link is provided because in my system prompt, we include an instruction to always include source of information.
 
+![alt text](<assets/Screenshot 2026-10-05 at 13.11.17.png>)
+
+You will be surprise that some source are from blog post. This does not meant that blog post is no good, but extra efforts is need to look at the source document to confirm the validity of the source.  
 
 [Source of Gemini](https://share.gemini.google/xOjCs52VmWq7)
 
 
 ## Implications
 
-With a mix of reliable and unreliable information in LLM, it creates a challenge where it is difficult to discern which information is useful and which is not useful.
+- As independent learner who need a lot of help in Mathematics, we need to be careful on LLM reasoning on Mathematics.
+- There is a need to re-calibrate the trust factor for LLM.
+- Seems that LLM is bad in reasoning in Mathematics.
+- If LLM are introduced as teaching assistant especially in school, it may caused more confusion.
+- With a mix of reliable and unreliable information in LLM, it creates a challenge where it is difficult to discern which information is useful and which is not useful.
 
-Learners may learn the wrong approach
+
+## Mitigation
+
+- Use RAG when possible and ask LLM to indicate if the information is outside the RAG source truth.
+- Use different LLM to verified answer. (As shown in problem above, we use Claude to verified the answer)
+Explore the prompting technique Comparative and Cross-Verification Prompting (CCVP) mentioned in (https://ieeexplore.ieee.org/document/10645894/) 
+- Query the same question multiple times. This is to make sure we get consistent response. (See  [5 Practical Techniques to Detect and Mitigate LLM Hallucinations Beyond Prompt Engineering](https://machinelearningmastery.com/5-practical-techniques-to-detect-and-mitigate-llm-hallucinations-beyond-prompt-engineering/))
+- Other techniques not relating to mathematics include adding an instruction to always provide information source when stating facts.This is to allow learner to make sure that the information source is trustworthy.
+- For getting trust worthy source of information, we can always constraint the LLM from getting answers from papers instead of internet. 
+
+
+## Conclusion
+
+- This exercise reinforce the notion that LLM is not good at reasoning.
+- We need to recalibrate our trust factor if we are too trusting previously.
+- Be aware of which area did LLM hallucinates heavily.
+- When asking Mathematical question and any question that requires reasoning, be extra vigilant to counter check with multiple sources.
+- If LLM is not good at reasoning, then why LLM score well in Mathematics benchmark? Is Goodhart Law at play? (Open for discussion)
 
 
 ## Reference
@@ -67,4 +93,7 @@ Learners may learn the wrong approach
 ## Other Potential Useful Reference
 - [Potential risks of generative artificial intelligence integration into K-12 education: A scoping review](https://www.sciencedirect.com/science/article/pii/S2666920X26000226)
 - [The Mirage of Knowledge: Analyzing the Roots and Impacts of LLM Hallucination in Education](https://zenodo.org/records/18707654)
+- [How Accurate Is ChatGPT for Math?](https://99helpers.com/blog/how-accurate-is-chatgpt/for-math)
+- [Hallucination detection, verification, and correction in generative AI: A comprehensive survey](https://www.sciencedirect.com/science/article/pii/S2949719126000361)
+
 
