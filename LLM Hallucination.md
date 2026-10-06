@@ -89,6 +89,7 @@ Explore the prompting technique Comparative and Cross-Verification Prompting (CC
 1. [When LLMs Hallucinate: Examining the Effects of Erroneous Feedback in Math Tutoring Systems](https://www.researchgate.net/publication/394147567_When_LLMs_Hallucinate_Examining_the_Effects_of_Erroneous_Feedback_in_Math_Tutoring_Systems)
 2. [Managing Hallucination Risk in LLM-Generated Outputs](https://dl.acm.org/doi/10.1145/3816713.3820249)
 3. [Hallucinations in Large Language Models for Education: Challenges and Mitigation](https://ijtle.com/issue-alldetail/hallucinations-in-large-language-models-for-education-challenges-and-mitigation)
+4. [5 Practical Techniques to Detect and Mitigate LLM Hallucinations Beyond Prompt Engineering](https://machinelearningmastery.com/5-practical-techniques-to-detect-and-mitigate-llm-hallucinations-beyond-prompt-engineering/)
 
 ## Other Potential Useful Reference
 - [Potential risks of generative artificial intelligence integration into K-12 education: A scoping review](https://www.sciencedirect.com/science/article/pii/S2666920X26000226)
